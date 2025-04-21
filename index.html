@@ -1,20 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido Ocelotte</title>
     <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        img {
+            border-radius: 15px;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.03);
+        }
+
+        audio {
+            margin: 1.5rem 0;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .linkedin-badge {
+            margin: 2rem 0;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .counter {
+            margin-top: 2rem;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .counter:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            img {
+                width: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
-<h1>Bienvenido, Ocelotte.</h1>
-<img src="media/tenor.gif" alt="dancing pug"  width=250/><br>
-    <audio src="/media/shboomcode.mp3" controls autoplay>
-<p>Si estas leyendo esto, es porque tu navegador no acepta audio html..</p>
-</audio><br>
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-     <div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="ashenartorias" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://mx.linkedin.com/in/ashenartorias?trk=profile-badge">Jesús Eduardo S.</a></div>
-              
-    
-    <!-- hitwebcounter Code START -->
-<a href="https://www.hitwebcounter.com" target="_blank">
-<img src="https://hitwebcounter.com/counter/counter.php?page=7842211&style=0001&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" /></a>                   
-    </body>
+    <div class="container">
+        <h1>Bienvenido, Ocelotte 👋</h1>
+        <img src="media/tenor.gif" alt="dancing pug" width="250">
+        
+        <audio controls autoplay>
+            <source src="/media/shboomcode.mp3" type="audio/mpeg">
+            <p>Si estás leyendo esto, es porque tu navegador no acepta audio HTML.</p>
+        </audio>
+
+        <div class="linkedin-badge">
+            <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+            <div class="badge-base LI-profile-badge" 
+                 data-locale="es_ES" 
+                 data-size="medium" 
+                 data-theme="dark" 
+                 data-type="VERTICAL" 
+                 data-vanity="ashenartorias" 
+                 data-version="v1">
+                <a class="badge-base__link LI-simple-link" 
+                   href="https://mx.linkedin.com/in/ashenartorias?trk=profile-badge">
+                    Jesús Eduardo S.
+                </a>
+            </div>
+        </div>
+
+        <div class="counter">
+            <a href="https://www.hitwebcounter.com" target="_blank">
+                <img src="https://hitwebcounter.com/counter/counter.php?page=7842211&style=0001&nbdigits=5&type=page&initCount=0" 
+                     title="Free Counter" 
+                     alt="web counter" 
+                     border="0">
+            </a>
+        </div>
+    </div>
+</body>
 </html>

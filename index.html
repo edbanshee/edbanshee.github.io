@@ -20,7 +20,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
             color: #ffffff;
             text-align: center;
             padding: 2rem;
@@ -30,23 +30,32 @@
             max-width: 800px;
             width: 100%;
             padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 15px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
             font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #e0e0e0;
+        }
+
+        .media-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
         }
 
         img {
             border-radius: 15px;
-            margin: 1.5rem 0;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
             transition: transform 0.3s ease;
         }
 
@@ -55,16 +64,16 @@
         }
 
         audio {
-            margin: 1.5rem 0;
             width: 80%;
             max-width: 400px;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
         }
 
         .linkedin-badge {
             margin: 2rem 0;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
         }
 
         .counter {
@@ -85,18 +94,24 @@
             img {
                 width: 200px;
             }
+            
+            .container {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Bienvenido, Ocelotte 👋</h1>
-        <img src="media/tenor.gif" alt="dancing pug" width="250">
         
-        <audio controls autoplay>
-            <source src="/media/shboomcode.mp3" type="audio/mpeg">
-            <p>Si estás leyendo esto, es porque tu navegador no acepta audio HTML.</p>
-        </audio>
+        <div class="media-container">
+            <img src="media/tenor.gif" alt="dancing pug" width="250">
+            <audio controls autoplay>
+                <source src="/media/shboomcode.mp3" type="audio/mpeg">
+                <p>Si estás leyendo esto, es porque tu navegador no acepta audio HTML.</p>
+            </audio>
+        </div>
 
         <div class="linkedin-badge">
             <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>

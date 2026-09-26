@@ -63,10 +63,57 @@
             transform: scale(1.03);
         }
 
-        audio {
-            width: 80%;
-            max-width: 400px;
-            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+        /* Estilos para el menú de proyectos */
+        .projects-menu {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .projects-menu h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #ccc;
+            font-weight: 500;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .app-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 150px;
+        }
+
+        .app-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .app-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: none;
+        }
+        
+        .app-btn:hover .app-logo {
+            transform: scale(1.05);
         }
 
         .linkedin-badge {
@@ -91,12 +138,12 @@
                 font-size: 2rem;
             }
             
-            img {
-                width: 200px;
-            }
-            
             .container {
                 padding: 1.5rem;
+            }
+            
+            .buttons-container {
+                gap: 1rem;
             }
         }
     </style>
@@ -107,20 +154,22 @@
         
         <div class="media-container">
             <img src="media/tenor.gif" alt="dancing pug" width="250">
-            <audio controls autoplay>
-                <source src="/media/shboomcode.mp3" type="audio/mpeg">
-                <p>Si estás leyendo esto, es porque tu navegador no acepta audio HTML.</p>
-            </audio>
-        </div>
-
-      
-        <div class="counter">
-            <a href="https://www.hitwebcounter.com" target="_blank">
-                <img src="https://hitwebcounter.com/counter/counter.php?page=7842211&style=0001&nbdigits=5&type=page&initCount=0" 
-                     title="Free Counter" 
-                     alt="web counter" 
-                     border="0">
-            </a>
+            
+            
+            <div class="projects-menu">
+                <h2>Mis proyectos hechos con IA</h2>
+                <div class="buttons-container">
+                    <a href="https://www.oceiros.com/collectahub" target="_blank" class="app-btn">
+                        <img src="placeholder.png" alt="Logo CollectaHub" class="app-logo">
+                        <span>CollectaHub</span>
+                    </a>
+                    
+                    <a href="https://www.oceiros.com/totalero" target="_blank" class="app-btn">
+                        <img src="placeholder.png" alt="Logo Totalero" class="app-logo">
+                        <span>Totalero</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
